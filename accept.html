@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Made By Coder Thinking  -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Norican&display=swap" rel="stylesheet">
+
+    <title>Accept</title>
+</head>
+<style>
+    body {
+        font-family: 'Norican', cursive;
+        background: #090d00;
+        font-weight: 400;
+        text-align: center;
+        margin: 0;
+    }
+
+    img {
+        height: 250px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+
+    }
+
+    #text {
+        font-size: 25px;
+        color: white;
+        margin-top: 0px;
+    }
+
+
+    h1 {
+        font-size: 30px;
+        color: white;
+        margin-top: 0px;
+    }
+    #pianoAudio {
+        display: none;
+    }
+</style>
+
+
+
+
+<body>
+
+
+
+
+    <section class="img">
+        <img src="love1.png" alt="">
+
+
+
+
+        <h1>"I Love You ❤️"</h1>
+
+        <audio id="pianoAudio" controls autoplay>
+            <source src="song.mp3" type="audio/mpeg">
+        </audio>
+
+
+    </section>
+
+
+    <div class="container">
+        <p id="text"></p>
+
+    </div>
+
+
+
+    <script>
+
+        const text = document.querySelector('#text');
+        const btn = document.querySelector('#btn');
+
+        const str = '"Thank you babe for making me the happiest person in the world. -your lover Aman"';
+        let i = 0;
+
+        function autoType() {
+            if (i < str.length) {
+                text.innerHTML += str.charAt(i);
+                i++;
+                setTimeout(autoType, 200);
+            } else {
+                btn.style.display = 'block';
+            }
+        }
+
+        autoType();
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
